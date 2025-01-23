@@ -1,0 +1,16 @@
+current directory: /Users/dreamworld/Documents/darshit/TradingAppMob/vendor/bundle/ruby/3.0.0/gems/nkf-0.2.0/ext/nkf
+/Users/dreamworld/.rvm/rubies/ruby-3.0.2/bin/ruby -I /Users/dreamworld/.rvm/rubies/ruby-3.0.2/lib/ruby/3.0.0 -r ./siteconf20240806-20125-ij9nfl.rb extconf.rb
+creating Makefile
+
+current directory: /Users/dreamworld/Documents/darshit/TradingAppMob/vendor/bundle/ruby/3.0.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= clean
+
+current directory: /Users/dreamworld/Documents/darshit/TradingAppMob/vendor/bundle/ruby/3.0.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\=
+compiling nkf.c
+linking shared-object nkf.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/dreamworld/Documents/darshit/TradingAppMob/vendor/bundle/ruby/3.0.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 nkf.bundle ./.gem.20240806-20125-6jk3wh

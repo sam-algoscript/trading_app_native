@@ -9,11 +9,11 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:3:5-67
-11-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:3:22-64
+11-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:3:5-67
+11-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:3:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:4:5-79
-12-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:4:22-76
+12-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:4:5-79
+12-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:4:22-76
 13    <!--
 14    This manifest file is used only by Gradle to configure debug-only capabilities
 15    for React Native Apps.
@@ -37,50 +37,50 @@
 24-->[androidx.core:core:1.9.0] /Users/dreamworld/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 25
 26    <application
-26-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:6:5-27:19
+26-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:6:5-27:19
 27        android:name="com.tradingappmob.MainApplication"
-27-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:8:7-38
+27-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:8:7-38
 28        android:allowBackup="false"
-28-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:12:7-34
+28-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:12:7-34
 29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 29-->[androidx.core:core:1.9.0] /Users/dreamworld/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 30        android:debuggable="true"
 31        android:extractNativeLibs="true"
 32        android:icon="@mipmap/ic_launcher"
-32-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:10:7-41
+32-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:10:7-41
 33        android:label="@string/app_name"
-33-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:9:7-39
+33-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:9:7-39
 34        android:networkSecurityConfig="@xml/network_security_config"
-34-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:14:7-67
+34-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:14:7-67
 35        android:roundIcon="@mipmap/ic_launcher_round"
-35-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:11:7-52
+35-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:11:7-52
 36        android:theme="@style/AppTheme"
-36-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:13:7-38
+36-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:13:7-38
 37        android:usesCleartextTraffic="true" >
-37-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/debug/AndroidManifest.xml:6:9-44
+37-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/debug/AndroidManifest.xml:6:9-44
 38        <activity
-38-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:15:7-26:18
+38-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:15:7-26:18
 39            android:name="com.tradingappmob.MainActivity"
-39-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:16:9-37
+39-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:16:9-37
 40            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-40-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:18:9-118
+40-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:18:9-118
 41            android:exported="true"
-41-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:21:9-32
+41-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:21:9-32
 42            android:label="@string/app_name"
-42-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:17:9-41
+42-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:17:9-41
 43            android:launchMode="singleTask"
-43-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:19:9-40
+43-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:19:9-40
 44            android:windowSoftInputMode="adjustResize" >
-44-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:20:9-51
+44-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:20:9-51
 45            <intent-filter>
-45-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:22:9-25:25
+45-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:22:9-25:25
 46                <action android:name="android.intent.action.MAIN" />
-46-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:23:13-65
-46-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:23:21-62
+46-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:23:13-65
+46-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:23:21-62
 47
 48                <category android:name="android.intent.category.LAUNCHER" />
-48-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:24:13-73
-48-->/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/AndroidManifest.xml:24:23-70
+48-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:24:13-73
+48-->/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/AndroidManifest.xml:24:23-70
 49            </intent-filter>
 50        </activity>
 51        <activity

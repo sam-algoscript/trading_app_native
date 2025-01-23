@@ -4,9 +4,9 @@ import { setClientWatchListData } from "../actions/ClientActions";
 
 export const clientData = async () => {
   try {
-    console.log(AxiosInstance.defaults.headers);
+    console.log("default header :",AxiosInstance.defaults.headers);
     const response = await axios.get(`Me`);
-console.log(response);
+// console.log(response);
     const result = response?.data?.data?.watchList;
     if (response?.status === 200) {
       return result;
@@ -14,7 +14,7 @@ console.log(response);
       return false;
     }
   } catch (e) {
-    console.log(e);
+    console.log("error",e);
     if (e.response?.status === 401) {
       console.log("hello");
       // Handle token refresh or redirect to login

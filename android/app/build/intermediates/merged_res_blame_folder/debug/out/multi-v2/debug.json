@@ -3973,23 +3973,6 @@
                     }
                 },
                 {
-                    "source": "/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "50",
-                        "endOffsets": "62"
-                    },
-                    "to": {
-                        "startLines": "1537",
-                        "startColumns": "4",
-                        "startOffsets": "95150",
-                        "endColumns": "50",
-                        "endOffsets": "95196"
-                    }
-                },
-                {
                     "source": "/Users/dreamworld/.gradle/caches/transforms-3/933cca3d682df19ab6b85bbd4417e041/transformed/jetified-viewpager2-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -4191,6 +4174,25 @@
                     }
                 },
                 {
+                    "source": "/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "54",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "267"
+                    },
+                    "to": {
+                        "startLines": "1707",
+                        "startColumns": "4",
+                        "startOffsets": "117387",
+                        "endLines": "1710",
+                        "endColumns": "12",
+                        "endOffsets": "117565"
+                    }
+                },
+                {
                     "source": "/Users/dreamworld/.gradle/caches/transforms-3/c2c67d6ef97116786f5e00cacbb4d36d/transformed/lifecycle-runtime-2.5.1/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -4246,6 +4248,23 @@
                     }
                 },
                 {
+                    "source": "/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "50",
+                        "endOffsets": "62"
+                    },
+                    "to": {
+                        "startLines": "1537",
+                        "startColumns": "4",
+                        "startOffsets": "95150",
+                        "endColumns": "50",
+                        "endOffsets": "95196"
+                    }
+                },
+                {
                     "source": "/Users/dreamworld/.gradle/caches/transforms-3/9b2c28bd5719adb7e465469e2ca76c12/transformed/jetified-flipper-0.201.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -4260,6 +4279,23 @@
                         "startOffsets": "85330,85399",
                         "endColumns": "68,56",
                         "endOffsets": "85394,85451"
+                    }
+                },
+                {
+                    "source": "/Users/dreamworld/Desktop/Isha/trading_app_native/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
+                    "from": {
+                        "startLines": "6,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "154,258",
+                        "endColumns": "63,68",
+                        "endOffsets": "213,322"
+                    },
+                    "to": {
+                        "startLines": "1500,1501",
+                        "startColumns": "4,4",
+                        "startOffsets": "92504,92568",
+                        "endColumns": "63,68",
+                        "endOffsets": "92563,92632"
                     }
                 },
                 {
@@ -4320,23 +4356,6 @@
                     }
                 },
                 {
-                    "source": "/Users/dreamworld/Downloads/TradingAppMob/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
-                    "from": {
-                        "startLines": "6,8",
-                        "startColumns": "4,4",
-                        "startOffsets": "154,258",
-                        "endColumns": "63,68",
-                        "endOffsets": "213,322"
-                    },
-                    "to": {
-                        "startLines": "1500,1501",
-                        "startColumns": "4,4",
-                        "startOffsets": "92504,92568",
-                        "endColumns": "63,68",
-                        "endOffsets": "92563,92632"
-                    }
-                },
-                {
                     "source": "/Users/dreamworld/.gradle/caches/transforms-3/061d078e19c3ae7d999b8bf4f4fbd3f7/transformed/jetified-appcompat-resources-1.6.1/res/values/values.xml",
                     "from": {
                         "startLines": "2,18,24,34,50",
@@ -4391,25 +4410,6 @@
                         "endLines": "2,8,10,18,19,25,31,68,69,70,75,76,77,78,88,96,99,122,127,128,133,138,139,140,145,146,151,152,157,158,159,165,166,167,172,177,178,190,194,195,196,197,200,201,204,207,208,209,210,211,214,217,218,219,220,225,228,231,232,233,238,239,240,243,246,247,250,253,256,259,260,261,264,267,268,273,274,279,282,285,286,287,288,289,290,291,292,293,294,306,355,356,357,358,368,369,370,373,378,389,395,436,445,452,453,459,460,461,462,471,475,1383,9403,9404,9405,9406,9497,9836,9847,9848,9849,9850,9851,9856,9857,9858,9859,10323,10324,10325,10331,10332,10338,10483,10495,10506,10817,10838,11333,11350,11351",
                         "endColumns": "56,11,60,11,51,47,50,51,60,45,11,51,49,50,11,11,44,58,11,56,11,11,53,56,11,57,11,55,11,56,50,11,51,54,11,11,49,55,11,60,59,69,11,67,11,11,61,64,67,66,11,11,66,64,64,11,11,11,65,66,11,68,65,11,11,66,11,11,11,11,55,64,11,11,64,11,66,11,11,11,64,61,61,61,58,59,60,60,58,11,50,48,47,57,11,46,59,11,11,45,46,51,11,11,54,11,45,54,44,11,11,40,4218,3604,143,4305,502,419,630,651,40,53,49,382,652,497,2876,345,231,139,35,129,133,35,35,231,126,105,483,35,302",
                         "endOffsets": "202,444,554,845,897,1229,1539,3589,3650,3696,3890,3942,3992,4043,4462,4774,4930,6510,6707,6764,6959,7141,7195,7252,7444,7502,7698,7754,7948,8005,8056,8278,8330,8385,8575,8751,8801,9432,9592,9653,9713,9783,9916,9984,10113,10239,10301,10366,10434,10501,10624,10749,10816,10881,10946,11127,11248,11369,11435,11502,11712,11781,11847,11972,12098,12165,12291,12418,12543,12670,12726,12791,12917,13040,13105,13313,13380,13560,13680,13800,13865,13927,13989,14051,14110,14170,14231,14292,14351,14819,17776,17825,17873,17931,18390,18437,18497,18603,18783,19413,19709,22248,22578,22861,22916,23178,23224,23279,23324,23665,23802,85996,590274,593879,594023,598329,603559,614352,615510,616162,616203,616257,616307,616929,617582,618080,620957,637425,637657,637797,638302,638432,638859,643520,644552,645164,653922,654566,673256,674378,674681"
-                    }
-                },
-                {
-                    "source": "/Users/dreamworld/Downloads/TradingAppMob/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "267"
-                    },
-                    "to": {
-                        "startLines": "1707",
-                        "startColumns": "4",
-                        "startOffsets": "117387",
-                        "endLines": "1710",
-                        "endColumns": "12",
-                        "endOffsets": "117565"
                     }
                 }
             ]

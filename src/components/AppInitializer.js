@@ -42,12 +42,16 @@ const AppInitializer = () => {
         }
 
         const userDetails = JSON.parse(userDetailsString);
+        // console.log("userdetails",userDetails);
+        
 
         if (userDetails && userDetails.accessToken) {
           await setAuthToken(userDetails.accessToken);
           // If user data exists, navigate to HomeScreen and initialize SignalR
           ConnectSignalR.start();
-          console.log("SignalR connected");
+          console.log("ConnectSignalR.start();",ConnectSignalR.start());
+          
+          // console.log("SignalR connected");
           await clientsData();
         } else {
           // If no accessToken, navigate to LoginScreen

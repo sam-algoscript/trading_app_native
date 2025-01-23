@@ -23,26 +23,26 @@ const LoginScreen = () => {
   const [pass, setPass] = useState("");
   const dispatch = useDispatch();
   const navigation = useNavigation();
- 
 
   const onLoginPres = async () => {
- 
-    
     const obj = {
       userName: userName,
       password: pass,
       role: "client",
     };
-    
-    
+    // await saveToken(user_data);
     const loginApi = await login(obj);
-    
-    console.log(loginApi,"loginApi");
+
+    console.log("loginApi", loginApi);
     if (loginApi?.data?.accessToken) {
-      console.log("login",accessToken);
-      console.log("Login successful, setting token in headers...");
+      console.log("login Token", loginApi.data.accessToken);
+      // console.log("Login successful, setting token in headers...");
+
+      // const accessToken = loginApi.data.accessToken;
       await setAuthToken(loginApi.data.accessToken); // Ensure the token is set before proceeding
       setLoginData(loginApi);
+      clientData();
+      navigation.navigate("HomeScreen");
     } else {
       console.error("Login failed or token not received.");
     }
@@ -51,9 +51,11 @@ const LoginScreen = () => {
   const clientsData = async () => {
     try {
       const watchListData = await clientData();
-      
-      dispatch(setClientWatchListData(watchListData));
+      console.log("watchListData", watchListData);
+
+
       if (watchListData) {
+        dispatch(setClientWatchListData(watchListData));
         navigation.navigate("HomeScreen");
       }
     } catch (error) {
@@ -65,7 +67,7 @@ const LoginScreen = () => {
     if (loginData?.data?.accessToken) {
       ConnectSignalR.start();
       clientsData();
-      // navigation.navigate("AppInitializer");
+      navigation.navigate("AppInitializer");
     }
   }, [loginData]);
 

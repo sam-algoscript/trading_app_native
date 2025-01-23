@@ -177,7 +177,7 @@ const RecyclerView = () => {
 
   const connectSignalR = useCallback(() => {
     const startConnection = new signalR.HubConnectionBuilder()
-      .withUrl('http://202.47.118.159:9292/signalRHub', {
+      .withUrl('https://trade.clustersofttech.com/signalRHub', {
         skipNegotiation: true,
         transport: signalR.HttpTransportType.WebSockets,
       })

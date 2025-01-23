@@ -37,7 +37,7 @@ const NewHomeScreen = () => {
   const [highLowPriceChanges, setHighLowPriceChanges] = useState({});
   // const [search, setSearch] = useState("");
   const [dataProvider, setDataProvider] = useState(
-    new DataProvider((r1, r2) => r1 !== r2) 
+    new DataProvider((r1, r2) => r1 !== r2)
   );
   const clientWatchListData = useSelector(
     (state) => state?.user?.clientWatchListData
@@ -56,9 +56,9 @@ const NewHomeScreen = () => {
     []
   );
   useEffect(() => {
-    console.log(typeof clientWatchListData ,"type of data")
+    console.log(typeof clientWatchListData, "type of data")
     if (clientWatchListData && Object.keys(clientWatchListData).length > 0) {
-      console.log(typeof Object.entries(clientWatchListData))
+      // console.log(typeof Object.entries(clientWatchListData))
       const transformedData = Object.entries(clientWatchListData).map(
         ([key, scripts]) => {
           const [id, watchlistName] = key.split(":");
@@ -97,8 +97,20 @@ const NewHomeScreen = () => {
       // setFilteredData([]);
     });
 
+    // const newData1 = {
+    //   es: "AAPL", // Example script symbol
+    //   ap: "150.25", // Ask Price
+    //   bp: "149.80", // Bid Price
+    //   hp: "151.00", // High Price
+    //   lp: "148.50", // Low Price
+    //   s: "AAPL", // Script (symbol)
+    // };
+
     const handleNewData = (newData) => {
-      console.log(Array.isArray(newData),"hello im array ");
+
+      console.log(Array.isArray(newData), "hello im array ");
+      console.log("Received new data:", newData);
+
       setData((prevData) => {
         const updatedData = [...prevData];
         const newPriceChanges = { ...priceChanges };
@@ -108,14 +120,15 @@ const NewHomeScreen = () => {
         );
         if (existingIndex !== -1) {
           const prevAskPrice = updatedData[existingIndex]?.ap;
-          const newAskPrice = (newData?.ap);
+          const newAskPrice = parseFloat(newData?.ap) || 0;
           const prevBidPrice = updatedData[existingIndex]?.bp;
-          const newBidPrice = newData?.bp;
+          const newBidPrice = parseFloat(newData?.bp) || 0;
           const prevLowPrice = updatedData[existingIndex]?.lp;
-          const newLowPrice = newData?.lp;
+          const newLowPrice = parseFloat(newData?.lp) || 0;
           const prevHighPrice = updatedData[existingIndex]?.hp;
-          const newHighPrice = newData?.hp;
+          const newHighPrice = parseFloat(newData?.hp) || 0;
 
+          
           if (newAskPrice > prevAskPrice) {
             newPriceChanges[newData.s] = {
               ...newPriceChanges[newData.s],
@@ -180,13 +193,20 @@ const NewHomeScreen = () => {
           updatedData.push(newData);
         }
         setPriceChanges(newPriceChanges);
+        console.log(newPriceChanges, "35456454464454644");
+
         setHighLowPriceChanges(newHighLowPriceChanges);
         setDataProvider(dataProvider.cloneWithRows(updatedData));
+        console.log(dataProvider.cloneWithRows(updatedData), "dataProvider.cloneWithRows(updatedData)");
 
         return updatedData;
       });
+      // setData(newData);
     };
-    ConnectSignalR.on("ReceiveSubscribedScriptUpdate", handleNewData);
+    ConnectSignalR.on("ReceiveSubscribedScriptUpdate",handleNewData(data));
+
+    // handleNewData(newData1);
+
   }, []);
 
   useEffect(() => {
@@ -219,11 +239,11 @@ const NewHomeScreen = () => {
     [priceChanges, highLowPriceChanges]
   );
   // console.log(data);
-  
+
 
   const handleWatchListPress = (watchlistName) => {
     console.log("called from watchlist click");
-    
+
     const currentData = transformData.find(
       (item) => item.watchlistName === watchlistName
     );
@@ -249,7 +269,7 @@ const NewHomeScreen = () => {
     );
   };
   const onChange = async (text) => {
-    console.log(text?.length);
+    // console.log(text?.length);
     if (text?.length > 0) {
       const filteredItems = currentScripts.filter((item) => {
         // Remove "NSE:" or "MCX:" prefix for search purposes only
@@ -274,7 +294,7 @@ const NewHomeScreen = () => {
       // setPreviousScripts(currentScripts);
       // setCurrentScripts(filteredItems);
     } else {
-      console.log(currentWatchListName);
+      // console.log(currentWatchListName);
       const currentData = transformData.find(
         (item) => item.watchlistName === currentWatchListName
       );
@@ -290,7 +310,7 @@ const NewHomeScreen = () => {
         style={{ height: (WIN_HEIGHT * 18) / 100, backgroundColor: "#1C355D" }}
       >
         <MarqueeText
-          style={{ fontSize: 20, marginTop: 40 }}
+          style={{ fontSize: 20, marginTop: 40, }}
           speed={1}
           marqueeOnStart={true}
           loop={true}
@@ -298,21 +318,21 @@ const NewHomeScreen = () => {
         >
           This app is only for paper trading not used real money in this app
         </MarqueeText>
-        <View style={{flexDirection:'row',alignItems:'center'}}>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
 
-        <TextInput
-          style={{
-            height: (WIN_HEIGHT * 4.5) / 100,
-            borderWidth: 1,
-            width: (WIN_WIDTH * 75) / 100,
-            marginVertical: (WIN_HEIGHT * 0.5) / 100,
-            marginLeft: (WIN_WIDTH * 2) / 100,
-            borderColor: "#FFFF",
-            borderRadius: (WIN_WIDTH * 2) / 100,
-          }}
-          onChangeText={(text) => onChange(text)}
-        />
-        <Text>{'Hello'}</Text>
+          <TextInput
+            style={{
+              height: (WIN_HEIGHT * 4.5) / 100,
+              borderWidth: 1,
+              width: (WIN_WIDTH * 75) / 100,
+              marginVertical: (WIN_HEIGHT * 0.5) / 100,
+              marginLeft: (WIN_WIDTH * 2) / 100,
+              borderColor: "#FFFF",
+              borderRadius: (WIN_WIDTH * 2) / 100,
+            }}
+            onChangeText={(text) => onChange(text)}
+          />
+          <Text>{'Hello'}</Text>
         </View>
         <FlatList data={transformData} renderItem={renderItem} horizontal />
       </View>

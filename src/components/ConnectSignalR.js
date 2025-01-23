@@ -1,9 +1,23 @@
 import * as SignalR from '@microsoft/signalr';
 import * as signalRMsgPack from "@microsoft/signalr-protocol-msgpack";
 import "react-native-url-polyfill/auto";
+import { getToken } from '../helper/AuthTokenHelper';
+
+// const token = saveToken;
+// console.log("token",token);
+
 
 const ConnectSignalR = new SignalR.HubConnectionBuilder()
-  .withUrl("http://202.47.118.159:9292/signalRHub", {
+  .withUrl("https://trade.clustersofttech.com/signalRHub", {
+
+    // accessTokenFactory: () => token,
+    accessTokenFactory: async () => {
+      const token = await getToken();
+      if (!token) {
+        console.error("Failed to retrieve token. Connection may fail.");
+      }
+      return token || "";
+    },
     skipNegotiation: true,
     transport: SignalR.HttpTransportType.WebSockets,
   })

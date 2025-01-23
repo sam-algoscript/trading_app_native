@@ -154,102 +154,102 @@ const HomeScreen = () => {
   useEffect(() => {
     getData();
   }, [watchListName]);
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       if (pendingUpdates.current.length > 0) {
-//         setData((prevData) => {
-//           const updatedData = [...prevData];
-//           const newPriceChanges = { ...priceChanges };
-//           const newHighLowPriceChanges = { ...highLowPriceChanges };
-//           pendingUpdates.current.forEach((newData) => {
-//             const existingIndex = updatedData.findIndex(
-//               (item) => item?.s === newData?.s
-//             );
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (pendingUpdates.current.length > 0) {
+        setData((prevData) => {
+          const updatedData = [...prevData];
+          const newPriceChanges = { ...priceChanges };
+          const newHighLowPriceChanges = { ...highLowPriceChanges };
+          pendingUpdates.current.forEach((newData) => {
+            const existingIndex = updatedData.findIndex(
+              (item) => item?.s === newData?.s
+            );
 
-//             // console.log(newData);
+            // console.log(newData);
             
 
-//             if (existingIndex !== -1) {
-//               const prevAskPrice = updatedData[existingIndex]?.ap;
-//               const newAskPrice = newData?.ap;
-//               const prevBidPrice = updatedData[existingIndex]?.bp;
-//               const newBidPrice = newData?.bp;
-//               const prevLowPrice = updatedData[existingIndex]?.lp;
-//               const newLowPrice = newData?.lp;
-//               const prevHighPrice = updatedData[existingIndex]?.hp;
-//               const newHighPrice = newData?.hp;
+            if (existingIndex !== -1) {
+              const prevAskPrice = updatedData[existingIndex]?.ap;
+              const newAskPrice = newData?.ap;
+              const prevBidPrice = updatedData[existingIndex]?.bp;
+              const newBidPrice = newData?.bp;
+              const prevLowPrice = updatedData[existingIndex]?.lp;
+              const newLowPrice = newData?.lp;
+              const prevHighPrice = updatedData[existingIndex]?.hp;
+              const newHighPrice = newData?.hp;
 
-//               if (newAskPrice > prevAskPrice) {
-//                 newPriceChanges[newData.s] = {
-//                   ...newPriceChanges[newData.s],
-//                   askPriceColor: "green",
-//                 };
-//               } else if (newAskPrice < prevAskPrice) {
-//                 newPriceChanges[newData.s] = {
-//                   ...newPriceChanges[newData.s],
-//                   askPriceColor: "red",
-//                 };
-//               }
+              if (newAskPrice > prevAskPrice) {
+                newPriceChanges[newData.s] = {
+                  ...newPriceChanges[newData.s],
+                  askPriceColor: "green",
+                };
+              } else if (newAskPrice < prevAskPrice) {
+                newPriceChanges[newData.s] = {
+                  ...newPriceChanges[newData.s],
+                  askPriceColor: "red",
+                };
+              }
 
-//               if (newBidPrice > prevBidPrice) {
-//                 newPriceChanges[newData.s] = {
-//                   ...newPriceChanges[newData.s],
-//                   bidPriceColor: "green",
-//                 };
-//               } else if (newBidPrice < prevBidPrice) {
-//                 newPriceChanges[newData.s] = {
-//                   ...newPriceChanges[newData.s],
-//                   bidPriceColor: "red",
-//                 };
-//               }
+              if (newBidPrice > prevBidPrice) {
+                newPriceChanges[newData.s] = {
+                  ...newPriceChanges[newData.s],
+                  bidPriceColor: "green",
+                };
+              } else if (newBidPrice < prevBidPrice) {
+                newPriceChanges[newData.s] = {
+                  ...newPriceChanges[newData.s],
+                  bidPriceColor: "red",
+                };
+              }
 
-//               if (newHighPrice > prevHighPrice) {
-//                 newHighLowPriceChanges[newData.s] = {
-//                   ...newHighLowPriceChanges[newData.s],
-//                   highPriceColor: "#e6ffe6",
-//                 };
-//                 setTimeout(() => {
-//                   setHighLowPriceChanges((prev) => ({
-//                     ...prev,
-//                     [newData.s]: {
-//                       ...prev[newData.s],
-//                       highPriceColor: undefined,
-//                     },
-//                   }));
-//                 }, 500);
-//               } else if (newLowPrice < prevLowPrice) {
-//                 newHighLowPriceChanges[newData.s] = {
-//                   ...newHighLowPriceChanges[newData.s],
-//                   highPriceColor: "#FFD6D7",
-//                 };
-//                 setTimeout(() => {
-//                   setHighLowPriceChanges((prev) => ({
-//                     ...prev,
-//                     [newData.s]: {
-//                       ...prev[newData.s],
-//                       highPriceColor: undefined,
-//                     },
-//                   }));
-//                 }, 500);
-//               }
+              if (newHighPrice > prevHighPrice) {
+                newHighLowPriceChanges[newData.s] = {
+                  ...newHighLowPriceChanges[newData.s],
+                  highPriceColor: "#e6ffe6",
+                };
+                setTimeout(() => {
+                  setHighLowPriceChanges((prev) => ({
+                    ...prev,
+                    [newData.s]: {
+                      ...prev[newData.s],
+                      highPriceColor: undefined,
+                    },
+                  }));
+                }, 500);
+              } else if (newLowPrice < prevLowPrice) {
+                newHighLowPriceChanges[newData.s] = {
+                  ...newHighLowPriceChanges[newData.s],
+                  highPriceColor: "#FFD6D7",
+                };
+                setTimeout(() => {
+                  setHighLowPriceChanges((prev) => ({
+                    ...prev,
+                    [newData.s]: {
+                      ...prev[newData.s],
+                      highPriceColor: undefined,
+                    },
+                  }));
+                }, 500);
+              }
 
-//               updatedData[existingIndex] = newData;
-//             } else {
-//               updatedData.push(newData);
-//             }
-//           });
-// console.log(updatedData);
-//           setPriceChanges(newPriceChanges);
-//           setHighLowPriceChanges(newHighLowPriceChanges);
-//           setDataProvider(dataProvider.cloneWithRows(updatedData));
-//           pendingUpdates.current = [];
-//           return updatedData;
-//         });
-//       }
-//     }, 1);
+              updatedData[existingIndex] = newData;
+            } else {
+              updatedData.push(newData);
+            }
+          });
+console.log(updatedData,"updatedData");
+          setPriceChanges(newPriceChanges);
+          setHighLowPriceChanges(newHighLowPriceChanges);
+          setDataProvider(dataProvider.cloneWithRows(updatedData));
+          pendingUpdates.current = [];
+          return updatedData;
+        });
+      }
+    }, 1);
 
-//     return () => clearInterval(interval);
-//   }, [priceChanges, highLowPriceChanges]);
+    return () => clearInterval(interval);
+  }, [priceChanges, highLowPriceChanges]);
 
   const rowRenderer = useCallback(
     (type, data) => (
@@ -281,7 +281,7 @@ const HomeScreen = () => {
         style={{ height: (WIN_HEIGHT * 18) / 100, backgroundColor: "#1C355D" }}
       >
         <MarqueeText
-          style={{ fontSize: 20, marginTop: 40 }}
+          style={{ fontSize: 20, marginTop: 40}}
           speed={1}
           marqueeOnStart={true}
           loop={true}
